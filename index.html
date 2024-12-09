@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="nav" class="nav-ul">
+          <div class="logo-container">
+            <img src="./imgs/admin.svg" alt="" srcset="" />
+            <span>MyAdmmin</span>
+          </div>
+          <div class="links-container">
+            <li class="nav-li">
+              <a class="nav-link" href="/">Home</a>
+              <div class="super-nav">
+                <div class="nav-heading">
+                  Heading One
+                  <ul class="super-nav-ul">
+                    <li>
+                      <a class="super-nav-link" href="/about">test link</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-heading">
+                  Heading Two
+                  <ul class="super-nav-ul">
+                    <li><a class="super-nav-link" href="/">test link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-li">
+              <a class="nav-link" href="/">About</a>
+              <div class="super-nav">
+                <ul class="super-nav-ul">
+                  b
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-li">
+              <a class="nav-link" href="/">admin</a>
+              <div class="super-nav">
+                <ul class="super-nav-ul">
+                  c
+                </ul>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="modal" class="modal-container">
+        <button id="close-modal" class="close-modal">X</button>
+        <div class="modal-header">
+          <p>WARNING!</p>
+          <p>You are about to clear all items</p>
+        </div>
+        <div class="modal-body">do you wish to continue?
+          <input id="confirm-delete-input" class="confirm-delete-text" type="text" placeholder="Type Delete To Confirm">
+        </div>
+        <div class="modal-footer">
+          <button id="clear-btn" class="clear-btn">clear</button>
+        </div>
+      </div>
+      <div id="alert" class="alert-container"></div>
+      <div class="hero-container">
+        <h1>Welcome!</h1>
+        <h2>To your Admin App</h2>
+        <h2>keep track of your Admins</h2>
+      </div>
+      <div class="form-container">
+        <form id="form" class="form">
+          <input
+            id="name-input"
+            class="text-input"
+            type="text"
+            placeholder="Enter Name"
+          />
+          <input
+            id="email-input"
+            class="text-input"
+            type="text"
+            placeholder="Enter Email"
+          />
+
+          <div class="form-control">
+            <label for="admin-checkbox">Admin</label>
+            <input type="checkbox" name="" id="admin-checkbox" />
+          </div>
+          <div class="form-control">
+            <button id="onSubmitBtn" type="submit">Add</button>
+            <button id="clear" type="button">clear all</button>
+            <button class="cancel-edit" id="cancel-edit" type="button">
+              Cancel Edit
+            </button>
+            <button class="cancel-reset" id="reset-filter" type="button">
+              Reset
+            </button>
+          </div>
+        </form>
+
+        <div class="number-container">
+          <div id="list-length" class="number-div">-</div>
+        </div>
+      </div>
+
+      <div id="filter-container" class="filter-container">
+        <input
+          id="filter"
+          class="filter-input"
+          type="text"
+          placeholder="Filter by Email"
+        />
+
+        <div class="filter-btn-container">
+          <button id="filter-down" class="filter-btn">filter down</button>
+          <button id="filter-up" class="filter-btn">filter up</button>
+        </div>
+      </div>
+
+      <div class="list-container">
+        <ul class="ul" id="ul"></ul>
+      </div>
+    </div>
+    <div class="loader"></div>
+  </body>
+</html>
